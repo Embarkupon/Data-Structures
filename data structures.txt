@@ -43,6 +43,7 @@ get larger.
 then it would take up more space.
 
 Bubble sort algorithm
+- simple. very inefficient
 - starts at the first element of an array
 - compares the current element with the next element
 - if the the current element is greater than the next, swap them
@@ -50,3 +51,11 @@ Bubble sort algorithm
 - after each complete pass through the array, the largest unsorted element
 is placed at the end of the array
 - repeat the process for remaining unsorted elements
+
+Selection sort algorithm
+- simple and fairly efficient
+- starts at the first position in an array
+- passes through the entire array sequentially
+- it is determined that the smallest element should be in the first position
+- swap the smallest element with the element in the first position
+- repeat
