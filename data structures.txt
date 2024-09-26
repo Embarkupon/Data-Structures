@@ -1,0 +1,37 @@
+What is an algorithm.
+Algorithms and data structures are the most common interview questions.
+you need a fundamental understanding of data structures.
+
+What is an algorithm?
+A set of instructions used to solve a problem.
+problem being a task that needs a set of instructions to achieve.
+
+The linear search algorithm is defined as a seuential search algorithm
+that starts from one end and goes through each element of the list until
+the desired element is found; otherwise the search continues until it reaches
+the end of a data set.
+
+The binary search algorithm targets a SORTED array. It works by repeatedly
+dividing the search interval in half until the target value is found or
+the interval is empty. THE SEARCH INTERVAL IS HALVED BY COMPARING THE TARGET
+TO THE MIDDLE IN THE SEARCH SPACE.
+
+Big O notation
+The complexity of an algorithm as a function of the size.
+the 'O' in O(n) is the order of magnitude of complexity
+the (n) is a function of the size, size of the input.
+O(n) describes how an algorithm performs in the worst case scenario, the upper bound.
+
+Linear search has a time complexity of O(n), linear time
+Binary search has a time complexity of O(log n), logarithmic runtime.
+where the logarithm is the inverse of an exponent meaning it is describing
+how many times n should occur to evaluate to the result
+quadratic runtime O(n^2)
+cubic runtime O(n^3)
+quasilinear runtime O(n log n), for every value of n run a log n number of
+operations (merge sort)
+polynomial runtime are O(n^k), usually considered efficient and used often.
+constant time is O(1), reading a value in a list for example
+exponential runtime O(x^n), least efficient.
+
+
