@@ -34,19 +34,41 @@ int binary_search(int *arr, int size, int target) {
             return midpoint;
         }
         // else if the midpoint is less than the target
-        // assign the midpoint + 1 to be first. 
+        // search the right hald of the array. 
         else if (arr[midpoint] < target)
         {
             first = midpoint + 1;
         }
         // else i.e. the midpoint is greater than the target
-        // assign the midpoint - 1 to be last.
+        // search the left half of the array.
         else
         {
             last = midpoint - 1;
         }  
     }
     //if the loop exits without finding the target
+    return -1;
+}
+
+int recursive_binary_search (int *arr, int size, int first, int last, int target) {
+    // if list is empty
+    if (size == 0) {
+        return -1;
+    }
+    // if the list is not empty
+    else {
+        sort(arr, arr+size);
+        int midpoint = round((first + last)/2);
+        if (arr[midpoint] == target) {
+            return midpoint;
+        } 
+        else if (arr[midpoint] < target) {
+            return recursive_binary_search(arr, size, midpoint+1, last, target);
+        }
+        else if (arr[midpoint] > target) {
+            return recursive_binary_search(arr, size, first, midpoint-1, target);
+        }
+    }
     return -1;
 }
 
@@ -79,6 +101,14 @@ int main() {
         cout <<  find_me << " was found using binary search at index "<< binary_index << endl;
     } else {
         cout << find_me << " was not found using binary search" << endl;
+    }
+
+    //determining if the recursive binary search was successful
+    int rBinary_index = recursive_binary_search(unsorted_array, length, 0, length - 1, find_me);
+    if (rBinary_index != -1) {
+        cout <<  find_me << " was found using recursive binary search at index "<< rBinary_index << endl;
+    } else {
+        cout << find_me << " was not found using recursive binary search" << endl;
     }
 
     return 0;
