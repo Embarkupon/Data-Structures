@@ -75,7 +75,7 @@ int main() {
 
     //determining if the binary search was successful
     int binary_index = binary_search(unsorted_array, length, find_me);
-    if (linear_index != -1) {
+    if (binary_index != -1) {
         cout <<  find_me << " was found using binary search at index "<< binary_index << endl;
     } else {
         cout << find_me << " was not found using binary search" << endl;
