@@ -34,4 +34,19 @@ polynomial runtime are O(n^k), usually considered efficient and used often.
 constant time is O(1), reading a value in a list for example
 exponential runtime O(x^n), least efficient.
 
+SPACE complexity
+- doesn't matter as much as it used to, but it's worth considering.
+- for a binary search constantly redefining the first, last, and midpoint 
+to find the target, the space complexity is constant, meaning it doesn't 
+get larger.
+- if a binary search would have to make sub arrays to continue searching, 
+then it would take up more space.
 
+Bubble sort algorithm
+- starts at the first element of an array
+- compares the current element with the next element
+- if the the current element is greater than the next, swap them
+- move to the next pair of elements and repeat the comparison
+- after each complete pass through the array, the largest unsorted element
+is placed at the end of the array
+- repeat the process for remaining unsorted elements
